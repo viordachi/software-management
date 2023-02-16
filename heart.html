@@ -1,0 +1,31 @@
+<html>
+<body>
+    <style>
+        body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+canvas { 
+border:solid 1px #ccc;
+}
+    </style>
+<canvas id="myCanvas" width="600" height="600"></canvas>
+<script>
+    var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+context.strokeStyle = 'black';
+context.lineWidth = 5;
+context.beginPath();
+context.moveTo(100, 65);
+context.bezierCurveTo(100, 0, 200, 30, 175, 100);      
+context.stroke();
+context.bezierCurveTo(175, 120, 100, 170, 100, 170);
+context.stroke();
+context.bezierCurveTo(100, 170, 25, 120, 25, 100);
+context.stroke();
+context.bezierCurveTo(0, 30, 100, 0, 100, 65);
+context.stroke();
+</script>
+</body>
+</html>
